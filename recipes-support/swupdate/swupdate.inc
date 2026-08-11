@@ -213,6 +213,9 @@ python () {
     if 'CONFIG_EXT_FILESYSTEM=y\n' in features:
         depends += ' e2fsprogs'
 
+    if 'CONFIG_PKCS11=y\n' in features:
+        depends += ' p11-kit'
+
     if mlprefix:
         deps = ' '
         rdeps = ' '
